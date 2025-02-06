@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retrospective Board</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Retrospective Board</h1>
+  <div class="board">
+    <div class="column" id="went-well">
+      <h2>What Went Well?</h2>
+      <div class="cards" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <textarea id="went-well-input" placeholder="Add feedback..."></textarea>
+      <button onclick="addCard('went-well')">Add Card</button>
+    </div>
+    <div class="column" id="didnt-go-well">
+      <h2>What Didn’t Go Well?</h2>
+      <div class="cards" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <textarea id="didnt-go-well-input" placeholder="Add feedback..."></textarea>
+      <button onclick="addCard('didnt-go-well')">Add Card</button>
+    </div>
+    <div class="column" id="action-items">
+      <h2>Action Items</h2>
+      <div class="cards" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <textarea id="action-items-input" placeholder="Add action item..."></textarea>
+      <button onclick="addCard('action-items')">Add Card</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
